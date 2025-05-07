@@ -19,8 +19,8 @@ Make sure you have the following installed and configured:
 
 3. **Project Setup**:
    ```bash
-   # Clone the repository
-   git clone https://github.com/your-username/waii-mcp-hands-on-lab.git
+   # Clone this repository
+   git clone git@github.com:waii-ai/waii-mcp-hands-on-lab.git
 
    # Initialize the project and set up the environment
    uv init waii-mcp-hands-on-lab
