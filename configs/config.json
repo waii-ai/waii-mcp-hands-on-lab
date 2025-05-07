@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+        "waii": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/ABSOLUTE/PATH/TO/waii-mcp-hands-on-lab",
+                "run",
+                "servers/waii_mcp_server.py",
+                "--api-key",
+                "<fill in your api key>"
+            ]
+        }
+    }
+}

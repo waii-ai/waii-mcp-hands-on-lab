@@ -198,6 +198,24 @@ uv run --directory /ABSOLUTE/PATH/TO/waii-mcp-hands-on-lab servers/waii_mcp_serv
 3. You should run this command to test the server implementation. As long as the server starts successfully, the server is ready.
 4. Stop the server, it will be started again through claude
 
+
+## Testing with Claude
+
+Now that your server is enhanced with data querying capabilities, you can test it with Claude by asking these questions:
+
+1. Basic Data Query:
+   ```
+   How can I calculate the total number of movies in the database?
+   ```
+   This will help verify that the basic data querying is working.
+
+2. Complex Data Analysis:
+   ```
+   How can I calculate the number of movies per genre in each decade? Get me a query for this.
+   ```
+   This will test the server's ability to handle more complex analytical queries.
+
+
 ## Configuration
 
 For information about configuring your MCP server, see [MCP Server Configuration](config_file.md).

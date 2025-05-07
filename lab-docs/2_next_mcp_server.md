@@ -28,6 +28,14 @@ class Chatbot:
         ]
 ```
 
+Also, update the tool description to inform Claude about the query execution capabilities:
+```python
+    @mcp.tool()
+    async def movie_db_query_generator(query: str) -> str:
+        """Generate and run SQL queries for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more.
+    ...
+```
+
 ## Step 2: Test the Changes
 
 To test the enhanced server:
