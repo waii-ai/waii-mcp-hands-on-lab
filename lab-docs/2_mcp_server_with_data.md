@@ -1,6 +1,7 @@
 # Allow MCP Server to Run Queries
 
-Now that you know how to build a basic MCP server, let's enhance it to handle data queries. We'll modify the existing server to add data querying capabilities.
+Now that you know how to build a basic MCP server, let's enhance it to handle data as well. We'll modify the existing server to add data querying capabilities.
+This is already implemented in `server/waii_mcp_server_with_data.py` if you want to skip the coding (please still see prerequisites)
 
 ## Prerequisites
 
@@ -52,13 +53,13 @@ The server will now be able to handle data queries and return structured results
 
 By adding `ChatModule.DATA` to the enabled modules, we've given the server the ability to:
 - Execute data queries
-- Return structured data results
+- Return structured data results (note row length limited to 100 rows)
 
 The server will now process these queries through WAII's data module, which can handle both SQL generation and data processing.
 
 ## Testing with Claude
 
-Now that your server is enhanced with data querying capabilities, you can test it with Claude by asking this question:
+Now that your server is enhanced with data querying capabilities, you can test it by updating the config, restarting Claude, and by asking this question:
 
 ```
 How many comedy movies were created each decade?
