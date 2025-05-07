@@ -8,7 +8,7 @@ Please follow the setup instructions in [PREREQUISITES.md](PREREQUISITES.md) to 
 
 ## Next Steps
 
-Ready to start building your first SQL bot? Follow these steps:
+Ready to start building your first MCP server? Follow these steps:
 
 1. [Understanding MCP and WAII Integration](lab-docs/0_understand_the_basics.md) - Learn about MCP and how it works with WAII
 2. [Building Your First MCP Server](lab-docs/1_basic_mcp_server.md) - Create your first MCP server with basic SQL capabilities
