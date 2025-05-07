@@ -1,6 +1,6 @@
 {
     "mcpServers": {
-        "waii": {
+        "weather": {
             "command": "uv",
             "args": [
                 "--directory",

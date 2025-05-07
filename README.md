@@ -97,8 +97,10 @@ Make sure you have the following installed and configured:
 
 6. **Test the MCP Server**:
    - Open Claude Desktop
+     - You can see enabled mcp tools in the drop down on the left next to the '+'
    - Ask a question like "What's the weather in San Francisco?"
    - You should see Claude use the MCP server to fetch weather information
+     - Claude should ask if it can trust the tool
    - If you see weather data in the response, your MCP server is working correctly!
 
 ## References
