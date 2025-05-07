@@ -1,5 +1,5 @@
 # waii-mcp-hands-on-lab
-Talk to your database using WAII and MCP
+Talk to your database using WAII and MCP through Claude Desktop
 
 ## Prerequisites 
 
