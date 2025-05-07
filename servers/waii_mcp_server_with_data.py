@@ -31,6 +31,7 @@ class Chatbot:
             ChatModule.CONTEXT,
             ChatModule.TABLES,
             ChatModule.QUERY,
+            ChatModule.DATA # Allow WAII to run queries and return results
         ]
 
     def ask_question(self, message: str) -> str:
@@ -59,9 +60,10 @@ def main():
     # Initialize chatbot
     chatbot = Chatbot(WAII_URL, args.api_key, DATABASE_KEY)
 
+    # Update the tool description to include data querying
     @mcp.tool()
     async def movie_db_query_generator(query: str) -> str:
-        """Generate SQL queries for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more.
+        """Generate and run SQL queries for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more.
 
         Args:
             query: Natural language question about the movie and tv database (e.g. "Show me all movies from 2023", 
