@@ -11,8 +11,8 @@ from io import StringIO
 import argparse
 
 # Constants
-WAII_URL = 'http://internal-testing.dev.waii.ai/api/'
-DATABASE_KEY = "snowflake://WAII_USER@gqobxjv-bhb91428/MOVIE_DB?role=WAII_USER_ROLE&warehouse=COMPUTE_WH"  # Hardcoded database key
+WAII_URL = "waii url"
+DATABASE_KEY = "db key"
 
 class Chatbot:
     def __init__(self, url: str, api_key: str, database_key: str):
