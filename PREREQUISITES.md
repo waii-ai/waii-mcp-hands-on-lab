@@ -48,7 +48,7 @@ Make sure you have the following installed and configured:
 
    # Install required packages
    uv add mcp[cli] httpx
-   uv pip install waii-sdk-py
+   uv pip install waii-sdk-py pandas
    ```
 
 5. **Configure Claude Desktop for MCP**:
