@@ -138,6 +138,7 @@ class Chatbot:
             ChatModule.CONTEXT,
             ChatModule.TABLES,
             ChatModule.QUERY,
+            ChatModule.DATA
         ]
 
     def ask_question(self, message: str) -> str:

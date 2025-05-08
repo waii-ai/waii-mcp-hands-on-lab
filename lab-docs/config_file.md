@@ -1,6 +1,6 @@
 # MCP Server Configuration
 
-The MCP server configuration file (`claude_desktop_config.json`) is a crucial component that tells Claude how to start and connect to your MCP server. We have placed template files in the `configs` directory of your project.
+The MCP server configuration file (`claude_desktop_config.json`) is a crucial component that tells Claude how to start and connect to your MCP server. We have placed templated files in the `configs` directory of your project.
 
 ## Step 1: Update the Configuration File
 
