@@ -46,7 +46,10 @@ The docstring in the tool declaration is crucial as it provides the interface do
 Here's an example of how to declare a tool using the MCP library:
 
 ```python
-@mcp.tool()
+@mcp.tool(
+    name="movie_db_query_generator",
+    description="Generate SQL queries for the movie database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more."
+)
 async def movie_db_query_generator(query: str) -> str:
     """Generate SQL queries for the movie database based on natural language questions.
 

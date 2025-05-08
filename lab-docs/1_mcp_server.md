@@ -192,34 +192,39 @@ if __name__ == "__main__":
     main()
 ```
 
-To run the server:
+## Sanity Check
+
+Before proceeding with the configuration, let's verify that the server implementation works:
+
 1. Make sure you have all the required dependencies installed
 2. Run the server with your WAII API key:
 ```bash
 uv run --directory /ABSOLUTE/PATH/TO/waii-mcp-hands-on-lab servers/waii_mcp_server.py --api-key "your-api-key-here"
 ```
 3. You should run this command to test the server implementation. As long as the server starts successfully, the server is ready.
-4. Stop the server, it will be started again through claude
-
-
-## Testing with Claude
-
-Now that your server is enhanced with data querying capabilities, you can test it with Claude by asking these questions:
-
-1. Basic Data Query:
-   ```
-   How can I calculate the total number of movies in the database?
-   ```
-   This will help verify that the basic data querying is working.
-
-2. Complex Data Analysis:
-   ```
-   How can I calculate the number of movies per genre in each decade? Get me a query for this.
-   ```
-   This will test the server's ability to handle more complex analytical queries.
-
+4. Stop the server, it will be started again through Claude
 
 ## Configuration
 
-For information about configuring your MCP server, see [MCP Server Configuration](config_file.md).
+Now that we've verified the server works, we need to configure Claude to use it. The configuration is necessary because:
+1. It tells Claude how to start your MCP server
+2. It specifies the command to run and any required arguments
+3. It ensures Claude can properly communicate with your server
+
+For detailed information about setting up the configuration file, see [MCP Server Configuration](config_file.md).
+
+## Testing with Claude
+
+Now that your server is configured, you can test it with Claude:
+
+1. Start Claude Desktop
+2. Try these example questions:
+   ```
+   How can I calculate the total number of movies in the database?
+   ```
+   ```
+   How can I calculate the number of movies per genre in each decade? Get me a query for this.
+   ```
+
+These questions will help verify that your MCP server is working correctly with Claude.
 
