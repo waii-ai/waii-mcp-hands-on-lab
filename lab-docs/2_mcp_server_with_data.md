@@ -31,10 +31,12 @@ class Chatbot:
 
 Also, update the tool description to inform Claude about the query execution capabilities:
 ```python
-    @mcp.tool()
+    @mcp.tool(
+        name="movie_db_query_generator",
+        description="Generate and run SQL queries for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more. This version also executes the queries and returns the actual data results."
+    )
     async def movie_db_query_generator(query: str) -> str:
-        """Generate and run SQL queries for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more.
-    ...
+        # ... implementation
 ```
 
 ## Step 2: Test the Changes
@@ -42,10 +44,11 @@ Also, update the tool description to inform Claude about the query execution cap
 To test the enhanced server:
 
 1. Stop the Claude Desktop application
-2. Restart Claude Desktop
-3. Try asking a data-related question, for example:
+2. Optional, update the config if using a new file
+3. Restart Claude Desktop
+4. Try asking a data-related question, for example:
    - "How many movies have won Oscars?"
-   - "How many movies have been per genre"
+   - "How many movies per genre"
 
 The server will now be able to handle data queries and return structured results.
 
@@ -56,13 +59,3 @@ By adding `ChatModule.DATA` to the enabled modules, we've given the server the a
 - Return structured data results (note row length limited to 100 rows)
 
 The server will now process these queries through WAII's data module, which can handle both SQL generation and data processing.
-
-## Testing with Claude
-
-Now that your server is enhanced with data querying capabilities, you can test it by updating the config, restarting Claude, and by asking this question:
-
-```
-How many comedy movies were created each decade?
-```
-
-When you ask this question, Claude will use the MCP server to generate the appropriate SQL query and process the data through WAII's data module to provide you with a detailed breakdown of comedy movies by decade.

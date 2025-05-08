@@ -86,7 +86,10 @@ def main():
     # ... previous code ...
 
     # Declare the mcp tool for Claude to use to talk to the database
-    @mcp.tool()
+    @mcp.tool(
+        name="movie_db_query_generator",
+        description="Generate SQL queries for the movie database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more."
+    )
     async def movie_db_query_generator(query: str) -> str:
         """Generate SQL queries for the movie database based on natural language questions.
 
