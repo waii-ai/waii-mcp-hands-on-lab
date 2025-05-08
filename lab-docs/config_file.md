@@ -1,10 +1,10 @@
 # MCP Server Configuration
 
-The MCP server configuration file (`config.json`) is a crucial component that tells Claude how to start and connect to your MCP server. This file should be placed in the `configs` directory of your project.
+The MCP server configuration file (`claude_desktop_config.json`) is a crucial component that tells Claude how to start and connect to your MCP server. We have placed template files in the `configs` directory of your project.
 
 ## Step 1: Update the Configuration File
 
-First, you'll need to update the configuration file in your project's `configs` directory. Here's the structure you'll need to modify:
+First, you'll need to update the `config.json` configuration file in your project's `configs` directory. Here's the structure you'll need to modify:
 
 ```json
 {
@@ -26,7 +26,7 @@ First, you'll need to update the configuration file in your project's `configs` 
 
 Make sure to:
 1. Replace `/ABSOLUTE/PATH/TO/waii-mcp-hands-on-lab` with the actual absolute path to your project
-2. Replace `<fill in your api key>` with your WAII API key
+2. Replace `<fill in your api key>` with the WAII API key provided to you
 
 ## Step 2: Copy to Claude's Config Directory
 

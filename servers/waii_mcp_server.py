@@ -31,6 +31,7 @@ class Chatbot:
             ChatModule.CONTEXT,
             ChatModule.TABLES,
             ChatModule.QUERY,
+            ChatModule.DATA
         ]
 
     def ask_question(self, message: str) -> str:
@@ -61,7 +62,7 @@ def main():
 
     @mcp.tool(
         name="movie_db_query_generator",
-        description="Generate SQL queries for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more."
+        description="Generate and run SQL queries for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more."
     )
     async def movie_db_query_generator(query: str) -> str:
         """Generate SQL queries for the movies and tv database based on natural language questions.
