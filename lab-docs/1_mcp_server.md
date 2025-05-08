@@ -4,6 +4,10 @@ In this section, we'll build an MCP server that uses WAII to generate SQL querie
 You can do this yourself, create a new file called `my_waii_mcp_server.py` in the servers directory.
 There is already a file `servers/waii_mcp_server.py` which you can use directly.
 
+## Prerequisites
+WAII will need pandas to format data before sending back to claude. Please install in the uv environment.
+`uv pip install pandas`
+
 ## Step 1: Create the Chatbot Class
 
 First, let's create the Chatbot class that will handle WAII integration. 
