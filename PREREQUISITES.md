@@ -53,6 +53,8 @@ Make sure you have the following installed and configured:
 
 5. **Configure Claude Desktop for MCP**:
 
+   For detailed information about the configuration file and troubleshooting, see [MCP Server Configuration](lab-docs/config_file.md).
+
    For macOS:
    ```bash
    # Create the config directory if it doesn't exist
