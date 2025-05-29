@@ -111,7 +111,7 @@ Make sure you have the following installed and configured:
    > - On Windows: `where uv`
    > 
    > Copy the output path and replace `"command": "uv"` with the full path (e.g., `"command": "/usr/local/bin/uv"`).
-   > This can happen when installing uv with `curl -LsSf https://astral.sh/uv/install.sh | sh`
+   > This can happen when installing uv on MAcOS/Linux with `curl -LsSf https://astral.sh/uv/install.sh | sh`
    > 
    > For more detailed information about the configuration file, see [MCP Server Configuration](lab-docs/config_file.md).
 
