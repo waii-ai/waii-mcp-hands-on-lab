@@ -3,6 +3,10 @@ Talk to your database using WAII and MCP through Claude Desktop
 
 # Prerequisites and Setup Instructions
 
+Before proceeding with the lab, please follow the installation instructions in the [Prerequisites](#prerequisites) section below.
+
+## Prerequisites
+
 Make sure you have the following installed and configured:
 
 1. **Claude Desktop** - Download and install Claude Desktop from [claude.ai/download](https://claude.ai/download)
@@ -10,7 +14,7 @@ Make sure you have the following installed and configured:
 2. **uv** - A fast Python package installer and resolver
    - For macOS:
      ```bash
-     curl -LsSf https://astral.sh/uv/install.sh | sh
+     brew install uv
      ```
    - For Windows:
      ```powershell
@@ -107,6 +111,7 @@ Make sure you have the following installed and configured:
    > - On Windows: `where uv`
    > 
    > Copy the output path and replace `"command": "uv"` with the full path (e.g., `"command": "/usr/local/bin/uv"`).
+   > This can happen when installing uv with `curl -LsSf https://astral.sh/uv/install.sh | sh`
    > 
    > For more detailed information about the configuration file, see [MCP Server Configuration](lab-docs/config_file.md).
 

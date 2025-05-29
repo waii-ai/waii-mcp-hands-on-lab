@@ -5,8 +5,7 @@ You can do this yourself, create a new file called `my_waii_mcp_server.py` in th
 There is already a file `servers/waii_mcp_server.py` which you can use directly.
 
 ## Prerequisites
-WAII will need pandas to format data before sending back to claude. Please install in the uv environment.
-`uv pip install pandas`
+Before proceeding with the implementation, please ensure you have completed all the installation steps in the [Prerequisites and Setup Instructions](../PREREQUISITES.md) section.
 
 ## Step 1: Create the Chatbot Class
 
