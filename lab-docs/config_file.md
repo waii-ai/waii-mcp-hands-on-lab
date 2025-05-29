@@ -118,6 +118,14 @@ When Claude needs to use your MCP server:
    - The server name ("waii" in this case) should match the name used in your FastMCP initialization
    - This name is used to identify the server in tool declarations
 
+4. **uv Connection Errors**:
+   - If you encounter an ENOENT error when trying to start the server, this likely means Claude cannot find the `uv` executable
+   - To fix this, you need to use the full path to the `uv` executable in the `command` field
+   - You can get the full path by running:
+     - On MacOS/Linux: `which uv`
+     - On Windows: `where uv`
+   - Replace `"command": "uv"` with the full path (e.g., `"command": "/usr/local/bin/uv"`)
+
 ## Example Usage in Code
 
 This configuration is used when you initialize your MCP server:

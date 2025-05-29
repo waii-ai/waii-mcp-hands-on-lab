@@ -102,6 +102,14 @@ Make sure you have the following installed and configured:
    }
    ```
 
+   > **Note**: If you encounter a `uv` connection error (error message ENOENT), you may need to use the full path to the `uv` executable in the `command` field. You can get this by running:
+   > - On MacOS/Linux: `which uv`
+   > - On Windows: `where uv`
+   > 
+   > Copy the output path and replace `"command": "uv"` with the full path (e.g., `"command": "/usr/local/bin/uv"`).
+   > 
+   > For more detailed information about the configuration file, see [MCP Server Configuration](lab-docs/config_file.md).
+
 6. **Test the MCP Server**:
    - Open Claude Desktop
      - You can see enabled mcp tools in the drop down on the left next to the '+'
