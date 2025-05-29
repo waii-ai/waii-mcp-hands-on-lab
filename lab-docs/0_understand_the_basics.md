@@ -38,7 +38,7 @@ mcp.run(transport='stdio')
    - Output format
    - Implementation details
 
-The docstring in the tool declaration is crucial as it provides the interface documentation for AI models. The docstring should include:
+The docstring and the tool declaration are crucial as it provides the interface documentation for AI models. They should include:
 - A clear description of what the tool does
 - Args section describing each parameter
 - Example usage in the description
