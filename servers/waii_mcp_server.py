@@ -2,6 +2,7 @@ from mcp.shared.exceptions import McpError
 from mcp.server import FastMCP
 from mcp.types import ErrorData, INVALID_PARAMS
 from waii_sdk_py import WAII
+from waii_sdk_py.chart import ChartType
 from waii_sdk_py.chat import ChatRequest, ChatModule
 import argparse
 from utils import process_response
@@ -31,7 +32,8 @@ class Chatbot:
             ChatModule.CONTEXT,
             ChatModule.TABLES,
             ChatModule.QUERY,
-            ChatModule.DATA
+            ChatModule.DATA,
+            ChatModule.CHART
         ]
 
     def ask_question(self, message: str) -> str:
@@ -40,6 +42,7 @@ class Chatbot:
                 ask=message,
                 parent_uuid=self.previous_chat_uuid,
                 modules=self.enabled_chat_modules,
+                chart_type=ChartType.VEGALITE,
             ))
             self.previous_chat_uuid = chat_response.chat_uuid
             response = process_response(chat_response)
@@ -62,7 +65,7 @@ def main():
 
     @mcp.tool(
         name="movie_db_query_generator",
-        description="Generate and run SQL queries for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more."
+        description="Generate and run SQL queries and generate charts for the movies and tv database based on natural language questions. Includes information about genres, directors, actors, awards, keywords, finances, and more."
     )
     async def movie_db_query_generator(query: str) -> str:
         """Generate SQL queries for the movies and tv database based on natural language questions.

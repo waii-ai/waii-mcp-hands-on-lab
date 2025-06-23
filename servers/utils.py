@@ -1,3 +1,4 @@
+import json
 from io import StringIO
 from waii_sdk_py.query import GetQueryResultResponse
 from waii_sdk_py.chat import ChatResponse
@@ -56,6 +57,10 @@ def process_response(chat_response: ChatResponse):
             references_section += f"Generated query:\n```\n{chat_response.response_data.query.query}\n```\n"
         if "<data>" in chat_response.response:
             references_section += f"Data:\n{serialize_query_result_response(chat_response.response_data.data, limit=100)}\n"
+        if "<chart>" in chat_response.response:
+            chart_spec = json.loads(chat_response.response_data.chart.chart_spec.chart)
+            chart_spec["data"] = chat_response.response_data.data.dict()
+            references_section += f"Chart:\n{json.dumps(chart_spec)}\n\n"
         return chat_response.response + "\n" + references_section
     except Exception as e:
         error_msg = f"Error processing chat response: {str(e)}"
