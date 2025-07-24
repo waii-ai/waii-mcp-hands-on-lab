@@ -13,7 +13,7 @@ DATABASE_KEY = "snowflake://WAII_USER@gqobxjv-bhb91428/MOVIE_DB?role=WAII_USER_R
 class Chatbot:
     def __init__(self, url: str, api_key: str, database_key: str):
         try:
-            print(f"Initializing WAII client with URL: {url}")
+            print(f"Initializing Waii client with URL: {url}")
             # Initialize WAII client
             WAII.initialize(
                 api_key=api_key,

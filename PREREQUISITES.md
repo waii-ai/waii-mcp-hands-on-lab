@@ -1,5 +1,6 @@
-# waii-mcp-hands-on-lab
-Talk to your database using Waii and MCP through Claude Desktop
+# waii-mcp-hands-on-lab Prerequisites
+This will walk you through setting up the MCP environment to connect MCP servers to Claude. 
+Please ask if you need any help
 
 ## System Requirements
 

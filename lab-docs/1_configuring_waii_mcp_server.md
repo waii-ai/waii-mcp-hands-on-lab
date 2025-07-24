@@ -38,7 +38,7 @@ For example, if
   - `which uv` returns `/usr/local/bin/uv`
   - `pwd` returns `/Users/waii_hands_on_lab/waii-mcp-hands-on-lab`
   - We provide the api key: `xxx123`
-Your complted configuration file should be:
+Your completed configuration file should be:
 ```json
 {
     "mcpServers": {

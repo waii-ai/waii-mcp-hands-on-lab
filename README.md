@@ -10,9 +10,8 @@ Please follow the setup instructions in [PREREQUISITES.md](PREREQUISITES.md) to 
 
 Ready to start building your first MCP server? Follow these steps:
 
-1. [Understanding MCP and WAII Integration](lab-docs/0_understand_the_basics.md) - Learn about MCP and how it works with WAII
-2. [Configuring the Waii MCP Server](lab-docs/1_configuring_waii_mcp_server.md) - Set up your configuration so Claude can connect to your server
-3. [Building the Waii MCP Server](lab-docs/ref_building_mcp_server.md) - Step-by-step guide to building your own MCP server
+1. [Configuring the Waii MCP Server](lab-docs/1_configuring_waii_mcp_server.md) - Set up your configuration so Claude can connect to your server
+2. [Building the Waii MCP Server](lab-docs/ref_building_mcp_server.md) - Step-by-step guide to building your own MCP server from scratch
 
 ## References
 
