@@ -1,8 +1,7 @@
 # Build a MCP Server
 
 In this section, we'll build an MCP server that uses WAII to generate SQL queries from natural language questions. We'll break down the implementation into clear steps.
-You can do this yourself, create a new file called `my_waii_mcp_server.py` in the servers directory.
-There is already a file `servers/waii_mcp_server.py` which you can use directly.
+You can follow along by creating a new file called `my_waii_mcp_server.py` in the servers directory.
 
 ## Prerequisites
 Before proceeding with the implementation, please ensure you have completed all the installation steps in the [Prerequisites and Setup Instructions](../PREREQUISITES.md) section.
@@ -196,18 +195,6 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
-## Sanity Check
-
-Before proceeding with the configuration, let's verify that the server implementation works:
-
-1. Make sure you have all the required dependencies installed
-2. Run the server with your WAII API key:
-```bash
-uv run --directory /ABSOLUTE/PATH/TO/waii-mcp-hands-on-lab servers/waii_mcp_server.py --api-key "your-api-key-here"
-```
-3. You should run this command to test the server implementation. As long as the server starts successfully, the server is ready.
-4. Stop the server, it will be started again through Claude
 
 ## Configuration
 

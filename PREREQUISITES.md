@@ -34,8 +34,7 @@ Make sure you have the following installed and configured:
    # Clone this repository
    git clone git@github.com:waii-ai/waii-mcp-hands-on-lab.git
 
-   # Initialize the project and set up the environment
-   uv init waii-mcp-hands-on-lab
+   # Change into the project directory
    cd waii-mcp-hands-on-lab
    ```
 
@@ -43,6 +42,9 @@ Make sure you have the following installed and configured:
 
    For macOS:
    ```bash
+   # Initialize the project and set up the environment
+   uv init
+
    # Create virtual environment and activate it
    uv venv
    source .venv/bin/activate
@@ -54,6 +56,9 @@ Make sure you have the following installed and configured:
 
    For Windows:
    ```powershell
+   # Initialize the project and set up the environment
+   uv init
+
    # Create virtual environment and activate it
    uv venv
    .venv\Scripts\activate
@@ -63,56 +68,13 @@ Make sure you have the following installed and configured:
    uv pip install waii-sdk-py pandas
    ```
 
-5. **Configure Claude Desktop for MCP**:
+5. **Next steps**:
 
-   For detailed information about the configuration file and troubleshooting, see [MCP Server Configuration](lab-docs/config_file.md).
+Please proceed to [MCP Server Configuration](lab-docs/1_configuring_waii_mcp_server.md) to configure the waii mcp server.
+If you need more information, you can refer to:
+  - [MCP basics](lab-docs/ref_understand_the_basics.md)
+  - [Building the Waii MCP server step-by-step](lab-docs/ref_building_mcp_server.md)
 
-   For macOS:
-   ```bash
-   # Create the config directory if it doesn't exist
-   mkdir -p ~/Library/Application\ Support/Claude
-   
-   # Copy the weather config file
-   cp configs/weather_config.json ~/Library/Application\ Support/Claude/claude_desktop_config.json
-   
-   # Open and edit the config file with your preferred text editor
-   # For example, using VS Code:
-   code ~/Library/Application\ Support/Claude/claude_desktop_config.json
-   # Or using nano:
-   nano ~/Library/Application\ Support/Claude/claude_desktop_config.json
-   ```
-
-   For Windows:
-   ```powershell
-   # Create the config directory if it doesn't exist
-   New-Item -ItemType Directory -Force -Path "$env:AppData\Claude"
-   
-   # Copy the weather config file
-   Copy-Item mcp_server/weather_config.json "$env:AppData\Claude\claude_desktop_config.json"
-   
-   # Open and edit the config file with your preferred text editor
-   # For example, using VS Code:
-   code $env:AppData\Claude\claude_desktop_config.json
-   # Or using Notepad:
-   notepad $env:AppData\Claude\claude_desktop_config.json
-   ```
-
-   In the config file, update the `--directory` path to point to your project's absolute path:
-   ```json
-   {
-       "mcpServers": {
-           "waii": {
-               "command": "uv",
-               "args": [
-                   "--directory",
-                   "/ABSOLUTE/PATH/TO/waii-mcp-hands-on-lab",
-                   "run",
-                   "servers/weather.py"
-               ]
-           }
-       }
-   }
-   ```
 
 ## Debugging
 
@@ -172,8 +134,6 @@ If you encounter issues with Python version compatibility when using `uv`, follo
    ```
 
 3. After setting the correct version, activate the virtual environment and continue with the installation steps.
-
-For more detailed information about the configuration file, see [MCP Server Configuration](lab-docs/config_file.md).
 
 ## References
 
