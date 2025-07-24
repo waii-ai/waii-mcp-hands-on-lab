@@ -70,7 +70,7 @@ Make sure you have the following installed and configured:
 
 5. **Next steps**:
 
-Please proceed to [MCP Server Configuration](lab-docs/1_configuring_waii_mcp_server.md) to configure the waii mcp server.
+Please proceed to [MCP Server Configuration](lab-docs/1_configuring_waii_mcp_server.md) to setup the prebuilt Waii MCP server.
 If you need more information, you can refer to:
   - [MCP basics](lab-docs/ref_understand_the_basics.md)
   - [Building the Waii MCP server step-by-step](lab-docs/ref_building_mcp_server.md)

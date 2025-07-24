@@ -1,6 +1,6 @@
 # MCP Server Configuration
 
-We will now configure the Waii MCP server using the existing implementation `servers/waii_mcp_server.py`.
+We will now configure the Waii MCP server using the prebuilt implementation `servers/waii_mcp_server.py`.
 If you want to do this yourself, please refer to [Building Waii MCP Server](lab-docs/ref_building_mcp_server.md)
 
 Even though we have provided a completed server, the server still needs to be registered with Claude.  The MCP server configuration file (`claude_desktop_config.json`) is a crucial component that tells Claude how to start and connect to your MCP server. We have placed templated configuration files in the `configs` directory of your project.
@@ -29,7 +29,7 @@ First, you'll need to update the `config.json` configuration file in your projec
 
 Make sure to:
 1. Replace `/ABSOLUTE/PATH/TO/waii-mcp-hands-on-lab` with the actual absolute path to your project
-2. Replace `<fill in your api key>` with the WAII API key provided to you during the lab
+2. Replace `<fill in your api key>` with the Waii API key provided to you during the lab
 3. Put the full path to the `uv` executable in the `command` field. You can get this by running:
    - On MacOS/Linux: `which uv`
    - On Windows: `where uv`
@@ -195,11 +195,6 @@ If you encounter issues with Python version compatibility when using `uv`, follo
    ```bash
    # Edit .python-version file to set desired version
    echo "3.10" > .python-version
-   
-   # Recreate virtual environment
-   deactivate  # if venv is active
-   rm -rf .venv
-   uv venv
    ```
 
    c. Using pyenv (recommended for managing multiple Python versions):
@@ -215,14 +210,15 @@ If you encounter issues with Python version compatibility when using `uv`, follo
 
    # Set local Python version for the project
    pyenv local 3.10
+   ```
 
+3. After setting the correct version, recreate the virtual environment and continue with the installation steps.
+   ```bash
    # Recreate virtual environment
    deactivate  # if venv is active
    rm -rf .venv
    uv venv
    ```
-
-3. After setting the correct version, activate the virtual environment and continue with the installation steps.
 
 ### API Key Issues
 - Make sure you have replaced `<fill in your api key>` in the config file with your actual WAII API key.
