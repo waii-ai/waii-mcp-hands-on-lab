@@ -20,7 +20,7 @@ First, you'll need to update the `config.json` configuration file in your projec
                 "run",
                 "servers/waii_mcp_server.py",
                 "--api-key",
-                "<fill in your api key>"
+                "<fill in your api key>"  # TODO: fill in api key
             ]
         }
     }
@@ -29,7 +29,7 @@ First, you'll need to update the `config.json` configuration file in your projec
 
 Make sure to:
 1. Replace `/ABSOLUTE/PATH/TO/waii-mcp-hands-on-lab` with the actual absolute path to your project
-2. Replace `<fill in your api key>` with the WAII API key provided to you
+2. Replace `<fill in your api key>` with the WAII API key provided to you during the lab
 3. Put the full path to the `uv` executable in the `command` field. You can get this by running:
    - On MacOS/Linux: `which uv`
    - On Windows: `where uv`
@@ -37,7 +37,8 @@ Make sure to:
 For example, if 
   - `which uv` returns `/usr/local/bin/uv`
   - `pwd` returns `/Users/waii_hands_on_lab/waii-mcp-hands-on-lab`
-Your configuration would look like:
+  - We provide the api key: `xxx123`
+Your complted configuration file should be:
 ```json
 {
     "mcpServers": {
@@ -49,7 +50,7 @@ Your configuration would look like:
                 "run",
                 "servers/waii_mcp_server.py",
                 "--api-key",
-                "<fill in your api key>"
+                "xxx123"
             ]
         }
     }
